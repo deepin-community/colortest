@@ -1,0 +1,75 @@
+From: Jari Aalto <jari.aalto@cante.net>
+Subject: 8colors.sh: remove eternal loop and use temp file securely
+Bug: https://bugs.debian.org/709282
+
+---
+ 8colors.sh |   38 ++++++++++++++++++++++++++------------
+ 1 file changed, 26 insertions(+), 12 deletions(-)
+
+--- a/8colors.sh
++++ b/8colors.sh
+@@ -33,12 +33,31 @@
+ # -----------------------------------------------------------------------------
+ # Show a simple 8-color test pattern
+ 
++TMPBASE=/tmp/tmp.$(basename $0).$$
++
++tmpfile ()
++{
++    mktemp $TMPBASE.XXXXXX ||
++    {
++	echo "$0: [FATAL] Cannnot create temporary file in $TMPBASE" >&2
++	exit 1
++    }
++}
++
++atexit ()
++{
++    $CMD "[0m"
++    rm -f "$TMPBASE"*
++}
++
+ ESC=""
+ CMD='echo'
+ OPT='-n'
+ SUF=''
+-TMP=/tmp/xterm$$
++TMP=$(tmpfile)
++
+ eval '$CMD $OPT >$TMP || echo fail >$TMP' 2>/dev/null
++
+ ( test ! -f $TMP || test -s $TMP ) &&
+ for verb in printf print ; do
+     rm -f $TMP
+@@ -52,18 +71,13 @@
+ 	fi
+     fi
+ done
+-rm -f $TMP
+ 
+-if ( trap "echo exit" EXIT 2>/dev/null ) >/dev/null
+-then
+-    trap '$CMD $OPT "[0m"; exit' EXIT HUP INT TRAP TERM
+-else
+-    trap '$CMD $OPT "[0m"; exit' 0    1   2   5    15
+-fi
++# Nubers are not POSIX: 0 1 2 5 15
++trap atexit EXIT HUP INT TRAP TERM
+ 
+ echo "[0m"
+-while true
+-do
++#while true
++#do
+     for AT in 0 1 4 7
+     do
+     	case $AT in
+@@ -102,6 +116,6 @@
+ 	    done
+ 	    echo "[0m"
+ 	done
+-	sleep 1
++	# sleep 1
+     done
+-done
++#done

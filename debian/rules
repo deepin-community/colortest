@@ -1,4 +1,35 @@
 #!/usr/bin/make -f
 
+PACKAGE = colortest
+PKGDIR ?= $(shell pwd)/debian/$(PACKAGE)
+DOCDIR  = debian/$(PACKAGE)/usr/share/doc/$(PACKAGE)/doc
+BINDIR  = $(PKGDIR)/usr/bin
+
+PACKAGE2 = colortest-python
+PKGDIR2 ?= $(shell pwd)/debian/$(PACKAGE2)
+BINDIR2  = $(PKGDIR2)/usr/bin
+
+man:
+	$(MAKE) -C debian -f pod2man.mk PACKAGE=colortest-8 makeman
+	$(MAKE) -C debian -f pod2man.mk PACKAGE=colortest-16 makeman
+	$(MAKE) -C debian -f pod2man.mk PACKAGE=colortest-16b makeman
+	$(MAKE) -C debian -f pod2man.mk PACKAGE=colortest-256 makeman
+
+# What is not not installed:
+#
+# colortest
+#   Problem: does not reset terminal back to defaults (colors stick)
+
+override_dh_auto_install: man
+	install -m 755 -d $(BINDIR)
+	install -m 755 8colors.sh $(BINDIR)/colortest-8
+	install -m 755 16colors.sh $(BINDIR)/colortest-16
+	install -m 755 colortable16.sh $(BINDIR)/colortest-16b
+	install -m 755 256colors2.pl $(BINDIR)/colortest-256
+
 %:
-	dh $@
+	dh  $@
+
+.PHONY: man configure build build-arch binary-arch
+
+# End of file

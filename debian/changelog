@@ -1,5 +1,121 @@
-template-repository (1.0-1) unstable; urgency=medium
+colortest (20110624-9) unstable; urgency=medium
 
-  * Initial release
+  * New Maintainer. (Closes: #920078)
+  * Update standards, homepage, and multi-arch
+  * Update watch file to include version
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Micheal Waltz <ecliptik@gmail.com>  Fri, 05 Mar 2021 17:30:11 -0800
+
+colortest (20110624-8) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Debian Janitor ]
+  * Use correct machine-readable copyright file URI.
+  * Update standards version to 4.5.0, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 08 Feb 2021 13:48:31 +0000
+
+colortest (20110624-7) unstable; urgency=medium
+
+  * QA upload.
+  * Set Debian QA Group as maintainer. (see #920078)
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: Changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 12.
+  * debian/control:
+      - Added the field Rules-Requires-Root: binary-targets.
+      - Standards-Version: bumped to 4.4.1 (no changes needed)
+      - Switch VCS URLs to salsa.debian.org
+  * debian/copyright:
+      - Added safe uri (https) to Format.
+      - Updated years and rights.
+
+ -- Giovani Augusto Ferreira <giovani@debian.org>  Tue, 31 Dec 2019 11:41:43 -0300
+
+colortest (20110624-6) unstable; urgency=medium
+
+  * debian/copyright
+    - Update URL info.
+  * debian/control
+    - (Homepage): Fix duck(1) "Couldn't connect to server" by updating
+      URL.
+  * debian/patches
+    - (10, 15): Update URLs
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 11 Nov 2016 07:24:54 +0200
+
+colortest (20110624-5) unstable; urgency=medium
+
+  * debian/copyright
+    - Update years.
+    - (Files): Add README.
+  * debian/control
+    - (Standards-Version): Update to 3.9.8.
+    - (Vcs-*): Update to anonscm.debian.org.
+      - (Build-Depends): add autotools-dev.
+  * debian/pod2man.mk
+    - Make build reproducible (Closes: #782207).
+      Patch thanks to Reiner Herrmann <reiner@reiner-h.de>.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 18 Oct 2016 20:19:59 +0300
+
+colortest (20110624-4) unstable; urgency=low
+
+  * debian/control
+    - (Homepage): Update broken URL.
+    - (Standards-Version): Update to 3.9.5.
+    - (Vcs-*): Update to anonscm.debian.org.
+  * debian/copyright
+    - (Comment): Remove broken URL.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 21 Feb 2014 15:11:39 +0200
+
+colortest (20110624-3) unstable; urgency=low
+
+  * debian/patches
+    * (10, 15): improve temporary file name creation by using only
+      basename of $0 and not the full path.
+    * (15): Disable delay from output; extra sleep.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 31 May 2013 09:11:21 +0300
+
+colortest (20110624-2) unstable; urgency=low
+
+  * debian/compat
+    - Update to 9.
+  * debian/control
+    - (Standards-Version): Update to 3.9.4.
+    - (Buid-Depends): Update to debhelper 9.
+  * debian/copyright
+    - Update to Copyright Format 1.0
+  * debian/patches
+    - (10): Update both patches to handle temp files securely
+      (security; Closes: #709282).
+  * debian/rules
+    - Adjust comments and .PHONY tag.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 22 May 2013 19:12:24 +0300
+
+colortest (20110624-1) unstable; urgency=low
+
+  * debian/compat
+    - Update to 8.
+  * debian/control
+    - (Description): Adjust sentence regarding the color tests: 8, 16 and
+      256 (Closes: #631399).
+    - (Standards-Version): Update to 3.9.2.
+    - (Buid-Depends): update to debhelper 8.
+  * debian/copyright
+    - Update to DEP 5.
+  * debian/rules
+    - Minor changes to comments.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 20 Sep 2011 09:08:08 +0300
+
+colortest (20100406-1) unstable; urgency=low
+
+  * Initial release (Closes: #576695).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 08 Apr 2010 14:35:32 +0300

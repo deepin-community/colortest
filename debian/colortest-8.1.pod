@@ -1,0 +1,73 @@
+#   Copyright
+#
+#      Copyright (C) 2009-2010 Jari Aalto
+#
+#   License
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; either version 2 of the License, or
+#       (at your option) any later version.
+#
+#       This program is distributed in the hope that it will be useful,
+#       but WITHOUT ANY WARRANTY; without even the implied warranty of
+#       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#       GNU General Public License for more details.
+#
+#       You should have received a copy of the GNU General Public License
+#       along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#   Description
+#
+#	To learn what TOP LEVEL section to use in manual pages,
+#	see POSIX/Susv standard and "tility Description Defaults" at
+#	http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap01.html#tag_01_11
+#
+#	This is manual page in Perl POD format. Read more at
+#	http://perldoc.perl.org/perlpod.html or run command:
+#
+#	    perldoc perlpod | less
+
+=pod
+
+=head1 NAME
+
+colortest-8 - Display ASCII color test graph
+
+=head1 SYNOPSIS
+
+  colortes-8
+
+=head1 DESCRIPTION
+
+Display color palette using 8 colors.
+
+=head1 OPTIONS
+
+None.
+
+=head1 ENVIRONMENT
+
+None.
+
+=head1 FILES
+
+None.
+
+=head1 SEE ALSO
+
+colortest-16(1)
+colortest-16b(1)
+colortest-256(1)
+
+=head1 AUTHORS
+
+Program was written by Thomas E. Dickey <dickey@his.com>
+
+This manual page was written by Jari Aalto <jari.aalto@cante.net>, for
+the Debian GNU system (but may be used by others). Released under
+license GNU GPL version 3 or (at your option) any later version. For
+more information about license, visit
+<http://www.gnu.org/copyleft/gpl.html>.
+
+=cut
