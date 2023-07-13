@@ -1,22 +1,91 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: colortest
+Upstream-Contact:
+ Wolfgang Frisch (colortable16.sh) <xororand@unfoog.de>,
+ Thomas Dickey (256colors2.pl) <dickey@his.com>,
+ Thomas E. Dickey (8colors.sh 16colors.sh in a private xterm patch #250 - 2009/10/13) <dickey@invisible-island.net>,
+ Entheon (colortest) <jazzworksweb@yahoo.com>
+Source:
+Comment:
+ For source, see individual X-Source stanzas below.
+ .
+ The MIT License information is from the headers of *.sh files.
 
-Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+Files: debian/*
+Copyright: 2010-2016 Jari Aalto <jari.aalto@cante.net>
+           2019      Giovani Augusto Ferreira <giovani@debian.org>
+License: GPL-3+
+
+Files: README 8colors.sh 16colors.sh
+X-Source: http://invisible-island.net (2011-06-23 no longer)
+Copyright:
+ 1999-2002,2003 Thomas E. Dickey <dickey@his.com>
+License: MIT-X11
+
+Files: 256colors2.pl
+X-Source: ftp://invisible-island.net/xterm/
+Copyright:
+ 1999-2007,2009 by Thomas E. Dickey <dickey@his.com>
+ 2002 Steve Wall
+ 1999 Todd Larason
+License: MIT-X11
+
+Files: colortable16.sh
+X-Source: http://www.frexx.de/xterm-256-notes/ (2016-11-11 no longer)
+Copyright:
+ 2009 Wolfgang Frisch <xororand@unfoog.de>
+License: GPL-3+
+
+Files: colortest
+X-Source: http://www.vim.org/scripts/script.php?script_id=1349 (2016-11-11 no longer)
+Copyright:
+  2009 Wolfgang Frisch <xororand@unfoog.de>
+License: Public-Domain
+
+License: Public-Domain
+ In the colortest, it reads: "by entheon, do whatever the hell you want with
+ this file".
+
+License: MIT-X11
+ All Rights Reserved
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE ABOVE LISTED COPYRIGHT HOLDER(S) BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name(s) of the above copyright
+ holders shall not be used in advertising or otherwise to promote the
+ sale, use or other dealings in this Software without prior written
+ authorization.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
+ the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
  .
  This package is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ Public License can be found in "/usr/share/common-licenses/GPL-3".

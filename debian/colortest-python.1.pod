@@ -1,0 +1,140 @@
+#   Copyright
+#
+#      Copyright (C) 2009-2010 Jari Aalto
+#
+#   License
+#
+#       This program is free software; you can redistribute it and/or modify
+#       it under the terms of the GNU General Public License as published by
+#       the Free Software Foundation; either version 2 of the License, or
+#       (at your option) any later version.
+#
+#       This program is distributed in the hope that it will be useful,
+#       but WITHOUT ANY WARRANTY; without even the implied warranty of
+#       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#       GNU General Public License for more details.
+#
+#       You should have received a copy of the GNU General Public License
+#       along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#   Description
+#
+#	To learn what TOP LEVEL section to use in manual pages,
+#	see POSIX/Susv standard and "tility Description Defaults" at
+#	http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap01.html#tag_01_11
+#
+#	This is manual page in Perl POD format. Read more at
+#	http://perldoc.perl.org/perlpod.html or run command:
+#
+#	    perldoc perlpod | less
+
+=pod
+
+=head1 NAME
+
+colortest-python - Display color test chart and convert between color values
+
+=head1 SYNOPSIS
+
+  colortest-python
+
+=head1 DESCRIPTION
+
+Displays 256, 88 and 16 color tables depending on what the terminal
+supports. Also provides for conversion between 256 and 88 color
+values.
+
+The program automatically detects 8, 16, 88, 256 color capabilities
+(via ncurses) and displays the appropriate color charts. Program can
+display the colors as blocks or 2d cubes optionally with color values
+overlaid in int or hex values, it can show the full rgb text string
+and show the display with a vertical (default) or horizontal
+orientation.
+
+In addition to the color charts it can also convert between 256 and
+88 color values. This can be useful when converting various terminals
+like between urxvt and xterm-256.
+
+The goal of this program was to provide the functionality of all the
+various Perl and sh scripts in one place with some bells and whistles.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-b, --block>
+
+Display as block format (vs cube) [default].
+
+=item B<-c, --cube-slice>
+
+Display as cube slices (vs block).
+
+=item B<-e NUMBER, --88to256=NUMBER>
+
+Convert (expand) 88 color value NUMBER to an 256 color value.
+
+=item B<-h, --help>
+
+Display sort help.
+
+=item B<-n, --numbers>
+
+Include color escape numbers on chart.
+
+=item B<-l, --rgb>
+
+Long format. RGB values as text.
+
+=item B<-p, --padding>
+
+Add extra padding (helps discern colors).
+
+=item B<-r NUMBER, --256to88=NUMBER >
+
+Convert (reduce) 256 color value NUMBER to an 88 color value.
+
+=item B<-v, --vertical>
+
+Display with vertical orientation [default].
+
+=item B<--version>
+
+Show program's version number and exit
+
+=item B<-x, --hex>
+
+Include hex color numbers on chart.
+
+=item B<-z, --horizontal>
+
+Display with horizontal orientation.
+
+=back
+
+=head1 ENVIRONMENT
+
+None.
+
+=head1 FILES
+
+None.
+
+=head1 SEE ALSO
+
+colortest-8(1)
+colortest-16(1)
+colortest-16b(1)
+colortest-16b(1)
+
+=head1 AUTHORS
+
+Program was written by Thomas John Eikenberry <jae@zhar.net>
+
+This manual page was written by Jari Aalto <jari.aalto@cante.net>, for
+the Debian GNU system (but may be used by others). Released under
+license GNU GPL version 3 or (at your option) any later version. For
+more information about license, visit
+<http://www.gnu.org/copyleft/gpl.html>.
+
+=cut

@@ -1,0 +1,49 @@
+Description
+
+	These scripts have been compiled from various sources by Jari
+	Aalto <jari.aalto@cante.net>
+
+colortable16.sh
+
+	URL	: http://www.frexx.de/xterm-256-notes/
+	Author	: Wolfgang Frisch <xororand@unfoog.de>:
+	License	: GPL v3+
+
+256colors2.pl
+
+	URL	: ftp://invisible-island.net/xterm/
+	Author	: Thomas Dickey <dickey@his.com>
+	License : MIT
+
+	This file can also be foudn from a secondary page at
+	www.frexx.de (see above), but the canonical source is the
+	xterm distribution.
+
+	Note: an alternative implementation in Python is available
+	from http://zhar.net/projects/shell/terminal_colors by John
+	Eikenberry <jae@zhar.net>
+
+8colors.sh
+
+	From invisible-island.net
+
+16colors.sh
+
+	From invisible-island.net
+
+colortest
+
+	URL	: http://www.vim.org/scripts/script.php?script_id=1349
+	Author	: Entheon <jazzworksweb@yahoo.com> (0.1 2005-09-12)
+ 	License : Public domain
+
+	xterm 256 color test and visual colors list. Rhe text in the
+	file reads "by entheon, do whatever the hell you want with
+	this file".
+
+	Ther is one problem with this program. You need to manually
+	reset terminal colors back to default with command:
+
+	      setterm -reset
+
+End of file
